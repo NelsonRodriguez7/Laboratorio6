@@ -42,6 +42,11 @@
                                                     $resultado->getModifiedCount();
         }
 
+        public function mostrar(){
+            $tablaColeccion = $this->conexion->comentario;
+            $resultado = $tablaColeccion->find();
+            return $resultado;
+        }
     }
 
 ?>

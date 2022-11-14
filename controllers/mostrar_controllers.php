@@ -13,11 +13,10 @@
         }
 
         public static function serch_bd(){
-            if($_POST){
                 $conexion = conexion::conexion_bd();
-                $token= filter_var($_POST["token"],FILTER_SANITIZE_FULL_SPECIAL_CHARS);
-                
-            }
+                $obj = new bd_models($conexion,"","","","","");
+                $resultado = $obj->mostrar();  
+                return $resultado;
         }
     }
 ?>
